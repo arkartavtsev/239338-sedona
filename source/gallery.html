@@ -12,7 +12,7 @@
       <header class="page-header">
 
         <div class="page-header__bar">
-          <a class="page-header__logo  logo">
+          <a class="page-header__logo  logo" href="index.html">
             <img class="logo__image" src="img/place.holder" alt="Седона логотип">
           </a>
           <button class="page-header__menu-toggle  menu-toggle" type="button">Открыть меню</button>
@@ -23,7 +23,7 @@
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link">Фото и видео</a>
+            <a class="main-nav__link  main-nav__link--current">Фото и видео</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="feedback.html">Форма отзыва</a>
@@ -49,7 +49,9 @@
           <h2 class="visually-hidden">Фотографии наших туристов</h2>
 
           <article class="snapshot">
-            <img class="snapshot__image" src="img/place.holder" alt="Неродные просторы">
+            <a class="snapshot__image-link" href="img/place.holder" target="_blank">
+              <img class="snapshot__image" src="img/place.holder" alt="Неродные просторы">
+            </a>
             <h3 class="snapshot__title">Неродные просторы</h3>
             <p class="snapshot__author">Автор фото: Борис</p>
             <button class="snapshot__vote-btn" type="button">Мне нравится</button>
@@ -57,7 +59,9 @@
           </article>
 
           <article class="snapshot">
-            <img class="snapshot__image" src="img/place.holder" alt="Местная растительность">
+            <a class="snapshot__image-link" href="img/place.holder" target="_blank">
+              <img class="snapshot__image" src="img/place.holder" alt="Местная растительность">
+            </a>
             <h3 class="snapshot__title">Местная растительность</h3>
             <p class="snapshot__author">Автор фото: Сергей</p>
             <button class="snapshot__vote-btn" type="button">Мне нравится</button>
@@ -65,7 +69,9 @@
           </article>
 
           <article class="snapshot">
-            <img class="snapshot__image" src="img/place.holder" alt="Дорога на север">
+            <a class="snapshot__image-link" href="img/place.holder" target="_blank">
+              <img class="snapshot__image" src="img/place.holder" alt="Дорога на север">
+            </a>
             <h3 class="snapshot__title">Дорога на север</h3>
             <p class="snapshot__author">Автор фото: Петр</p>
             <button class="snapshot__vote-btn" type="button">Мне нравится</button>
@@ -73,7 +79,9 @@
           </article>
 
           <article class="snapshot">
-            <img class="snapshot__image" src="img/place.holder" alt="Мост Дьявола">
+            <a class="snapshot__image-link" href="img/place.holder" target="_blank">
+              <img class="snapshot__image" src="img/place.holder" alt="Мост Дьявола">
+            </a>
             <h3 class="snapshot__title">Мост Дьявола</h3>
             <p class="snapshot__author">Автор фото: Антон</p>
             <button class="snapshot__vote-btn" type="button">Мне нравится</button>
@@ -100,12 +108,12 @@
               <button class="controls__control" type="button">
                 <span class="visually-hidden">Включить субтитры</span>
                 <!-- временная заглушка -->
-                <span class="controls__icon  controls__icon-subtitles"></span>
+                <span class="controls__icon  controls__icon--subtitles"></span>
               </button>
               <button class="controls__control" type="button">
                 <span class="visually-hidden">Поноэкранный режим</span>
                 <!-- временная заглушка -->
-                <span class="controls__icon  controls__icon-fullscreen"></span>
+                <span class="controls__icon  controls__icon--fullscreen"></span>
               </button>
             </div>
           </div>
