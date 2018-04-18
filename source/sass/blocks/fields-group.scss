@@ -1,0 +1,14 @@
+.fields-group {
+  border-bottom: 1px solid $gray;
+}
+
+.fields-group:last-of-type {
+  border-bottom: none;
+}
+
+.fields-group__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.44;
+  color: black;
+}

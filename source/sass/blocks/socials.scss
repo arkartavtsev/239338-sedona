@@ -1,0 +1,33 @@
+.socials__btn {
+  position: relative;
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  &--twitter::after {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--facebook::after {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--youtube::after {
+    background-image: url("../img/icon-youtube.svg");
+  }
+}

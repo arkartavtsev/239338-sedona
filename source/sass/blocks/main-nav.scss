@@ -1,0 +1,33 @@
+.main-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.main-nav__link {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2.22;
+  text-decoration: none;
+  color: white;
+  background-color: $light-blue;
+
+  &:hover {
+    background-color: $light-blue-hover;
+  }
+
+  &:active {
+    color: rgba(white, 0.3%);
+    background-color: $light-blue-active;
+  }
+}
+
+.main-nav__link--current {
+  cursor: default;
+
+  &:hover,
+  &:active {
+    color: white;
+    background-color: $light-blue;
+  }
+}

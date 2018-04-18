@@ -1,0 +1,44 @@
+.feature {
+  line-height: 1.5;
+
+  &--highlighted {
+    color: white;
+    background-color: $light-blue;
+  }
+}
+
+.feature__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2.22;
+  color: black;
+
+  &--ordered::after {
+    counter-increment: list-counter;
+
+    content: "– №" counter(list-counter) " –";
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  &--highlighted {
+    color: white;
+  }
+}
+
+.feature__image {
+  height: 260px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--city {
+    background-image: url("../img/main-city-mobile@1x.jpg");
+  }
+
+  &--bridge {
+    background-image: url("../img/main-bridge-mobile@1x.jpg");
+  }
+}

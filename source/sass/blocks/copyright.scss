@@ -1,0 +1,13 @@
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  fill: black;
+
+  &:hover {
+    fill: $light-blue;
+  }
+
+  &:active {
+    fill: rgba(black, 0.3%);
+  }
+}
