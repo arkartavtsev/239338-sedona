@@ -1,0 +1,18 @@
+.snapshot {
+  border-bottom: 1px solid $gray;
+}
+
+.snapshot__image {
+  display: block;
+  width: 280px;
+  height: 280px;
+}
+
+.snapshot__title {
+  font-weight: bold;
+  color: black;
+}
+
+.snapshot__author {
+  text-transform: none;
+}

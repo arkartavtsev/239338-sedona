@@ -1,0 +1,28 @@
+.intro--inner {
+  border-bottom: 1px solid $gray;
+}
+
+.intro__header {
+  background: rgb(225, 238, 247) url("../img/bg-back-mobile@1x.jpg") 50% 50% / cover no-repeat;
+}
+
+.intro__graphic-text {
+  display: block;
+
+  &--index {
+    width: 280px;
+    height: 213px;
+  }
+
+  &--inner {
+    width: 229px;
+    height: 39px;
+  }
+}
+
+.intro__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.44;
+  color: black;
+}

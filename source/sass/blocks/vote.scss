@@ -1,0 +1,17 @@
+.vote__btn {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.vote__thumb-icon {
+  width: 24px;
+  height: 22px;
+  fill: rgba(black, 0.3%);
+}
+
+.vote__counter {
+  font-weight: bold;
+  color: black;
+}

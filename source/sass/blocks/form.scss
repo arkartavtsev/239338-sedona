@@ -1,0 +1,38 @@
+.form {
+  line-height: 26px;
+}
+
+.form__label {
+  cursor: pointer;
+
+  &--selectable {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: none;
+  }
+}
+
+.form__field {
+  box-sizing: border-box;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 18px;
+  color: black;
+  background-color: $light-gray;
+  border: 4px solid $light-gray;
+
+  &:hover {
+    background-color: $gray;
+    border-color: $gray;
+  }
+
+  &:focus {
+    background-color: white;
+    border-color: $gray;
+    outline: none;
+  }
+
+  &::placeholder {
+    color: black;
+  }
+}

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "PT Sans";
+  src:
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src:
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@import "variables";
+@import "blocks/page-body";
+@import "blocks/page-logo";
+@import "blocks/menu-toggle";
+@import "blocks/main-nav";
+@import "blocks/page-main";
+@import "blocks/intro";
+@import "blocks/socials";
+@import "blocks/btn";
+@import "blocks/features";
+@import "blocks/feature";
+@import "blocks/hotels-search";
+@import "blocks/page-footer";
+@import "blocks/hashtag";
+@import "blocks/copyright";
+@import "blocks/snapshot";
+@import "blocks/vote";
+@import "blocks/presentation";
+@import "blocks/player";
+@import "blocks/controls";
+@import "blocks/fields-group";
+@import "blocks/form";
+@import "blocks/popup";
+
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+}
