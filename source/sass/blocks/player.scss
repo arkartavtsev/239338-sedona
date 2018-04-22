@@ -1,4 +1,18 @@
 .player__video-frame {
-  width: 321px;
-  height: 201px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+@media (min-width: $desktop-width) {
+  .player {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .player__video-frame {
+    width: 800px;
+    height: 500px;
+  }
 }

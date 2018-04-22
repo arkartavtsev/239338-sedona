@@ -1,6 +1,27 @@
+.presentation {
+  padding-top: 35px;
+  text-align: center;
+}
+
 .presentation__title {
+  padding: 0 20px;
+  margin: 0;
+  margin-bottom: 30px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1.44;
   color: black;
+}
+
+.presentation__text {
+  padding: 0 20px;
+  margin: 0;
+  margin-bottom: 35px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .presentation {
+    padding: 0 60px;
+  }
 }

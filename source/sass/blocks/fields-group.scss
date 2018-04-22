@@ -1,14 +1,35 @@
 .fields-group {
-  border-bottom: 1px solid $gray;
-}
+  padding: 21px 20px 25px;
 
-.fields-group:last-of-type {
-  border-bottom: none;
+  @include border-bottom;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .fields-group__title {
+  margin: 0;
+  margin-bottom: 22px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1.44;
+  text-align: center;
   color: black;
+}
+
+
+@media (min-width: $tablet-width) {
+  .fields-group {
+    padding: 0;
+    border-bottom: none;
+
+    &--wide {
+      width: 100%;
+    }
+  }
+
+  .fields-group--impression {
+    order: -1;
+  }
 }

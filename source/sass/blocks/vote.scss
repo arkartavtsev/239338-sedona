@@ -1,13 +1,15 @@
 .vote__btn {
   box-sizing: border-box;
+  padding: 0;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
 .vote__thumb-icon {
-  width: 24px;
-  height: 22px;
+  display: block;
+  width: 22px;
+  height: 20px;
   fill: rgba(black, 0.3%);
 }
 

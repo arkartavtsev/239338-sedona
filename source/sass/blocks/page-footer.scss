@@ -1,3 +1,39 @@
 .page-footer {
   line-height: 26px;
+  text-align: center;
+}
+
+.page-footer__hashtag {
+  padding: 36px 20px;
+}
+
+.page-footer__socials {
+  padding: 0 20px;
+}
+
+.page-footer__copyright {
+  padding: 40px 20px 23px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-footer__hashtag {
+    box-sizing: border-box;
+    width: 33.33%;
+  }
+
+  .page-footer__socials {
+    box-sizing: border-box;
+    width: 33.33%;
+  }
+
+  .page-footer__copyright {
+    box-sizing: border-box;
+    width: 33.33%;
+  }
 }

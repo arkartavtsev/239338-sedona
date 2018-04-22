@@ -1,13 +1,36 @@
-.intro--inner {
-  border-bottom: 1px solid $gray;
+.intro {
+  text-align: center;
+
+  &--inner {
+    @include border-bottom;
+  }
+
+  &--index {
+    padding-bottom: 44px;
+  }
+
+  &--gallery {
+    padding-bottom: 30px;
+  }
+
+  &--feedback {
+    padding-bottom: 20px;
+  }
 }
 
 .intro__header {
+  padding: 52px 0 67px;
+  margin-bottom: 42px;
   background: rgb(225, 238, 247) url("../img/bg-back-mobile@1x.jpg") 50% 50% / cover no-repeat;
+
+  &--index {
+    padding: 90px 0 85px;
+  }
 }
 
 .intro__graphic-text {
   display: block;
+  margin: 0 auto;
 
   &--index {
     width: 280px;
@@ -21,8 +44,25 @@
 }
 
 .intro__title {
+  padding: 0 30px;
+  margin: 0;
+  margin-bottom: 35px;
   font-weight: bold;
   font-size: 18px;
   line-height: 1.44;
   color: black;
+}
+
+.intro__text {
+  padding: 0 20px;
+  margin: 0;
+}
+
+
+@media (min-width: $tablet-width) {
+  .intro {
+    &--inner {
+      border: none;
+    }
+  }
 }
