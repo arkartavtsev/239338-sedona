@@ -20,7 +20,7 @@
           <button class="page-header__menu-toggle  menu-toggle" type="button">Открыть меню</button>
         </div>
 
-        <ul class="main-nav">
+        <ul class="page-header__main-nav  main-nav">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
           </li>
@@ -39,16 +39,16 @@
 
       <main class="page-main">
 
-        <div class="intro  intro--inner  intro--feedback">
+        <div class="intro  intro--feedback">
           <header class="intro__header">
-            <img class="intro__graphic-text  intro__graphic-text--inner" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
+            <img class="intro__graphic-text" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
           </header>
           <h1 class="intro__title">Оставьте свой отзыв</h1>
           <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
         </div>
 
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="form__fields-group  fields-group">
+          <div class="form__fields-group  form__fields-group--second  fields-group">
             <h2 class="fields-group__title">Представьтесь:</h2>
 
             <div class="form__fileds-wrapper">
@@ -67,21 +67,24 @@
             </div>
           </div>
 
-          <div class="form__fields-group  fields-group  fields-group--wide">
-            <h2 class="fields-group__title">Контактная информация:</h2>
+          <div class="form__fields-group  form__fields-group--wide  form__fields-group--contacts  fields-group">
+            <h2 class="fields-group__title  fields-group__title--wide  fields-group__title--contacts">Контактная информация:</h2>
 
-            <div class="form__fileds-wrapper">
-              <label class="form__label" for="feedback-author-tel">Контактный телефон*:</label>
-              <input class="form__field" id="feedback-author-tel" type="tel" name="feedback-author-tel" placeholder="Введите телефон" pattern="\+7-9[0-9]{2}-[0-9]{3}-[0-9]{4}" title="В формате +7-9XX-XXX-XXXX" required>
+            <div class="form__fileds-wrapper  form__fileds-wrapper--contacts">
+              <label class="form__label  form__label--contacts" for="feedback-author-tel">
+                <span class="form__hidden-unit">Контактный</span>
+                телефон*:
+              </label>
+              <input class="form__field  form__field--contacts" id="feedback-author-tel" type="tel" name="feedback-author-tel" placeholder="Введите телефон" pattern="\+7-9[0-9]{2}-[0-9]{3}-[0-9]{4}" title="В формате +7-9XX-XXX-XXXX" required>
             </div>
 
-            <div class="form__fileds-wrapper">
-              <label class="form__label" for="feedback-author-email">Электронная почта*:</label>
-              <input class="form__field" id="feedback-author-email" type="email" name="feedback-author-email" placeholder="Введите e-mail" pattern="[a-zA-Z]{1}([a-zA-Z0-9\-_\.]{1,})?[a-zA-Z0-9]{1}@[a-zA-Z]{1}([a-zA-Z0-9.]{1,})?[a-zA-Z0-9]{1}\.[a-zA-Z]{2,}" title="В формате name@mail.ru" required>
+            <div class="form__fileds-wrapper  form__fileds-wrapper--contacts">
+              <label class="form__label  form__label--contacts" for="feedback-author-email">Электронная почта*:</label>
+              <input class="form__field  form__field--contacts" id="feedback-author-email" type="email" name="feedback-author-email" placeholder="Введите e-mail" pattern="[a-zA-Z]{1}([a-zA-Z0-9\-_\.]{1,})?[a-zA-Z0-9]{1}@[a-zA-Z]{1}([a-zA-Z0-9.]{1,})?[a-zA-Z0-9]{1}\.[a-zA-Z]{2,}" title="В формате name@mail.ru" required>
             </div>
           </div>
 
-          <div class="form__fields-group  fields-group  fields-group--impression">
+          <div class="form__fields-group  form__fields-group--first  fields-group">
             <h2 class="fields-group__title">Ваше общее впечатление:</h2>
             <div class="form__fileds-wrapper">
               <input class="form__radiobtn" id="feedback-impression-good" type="radio" name="feedback-impression" value="good" checked>
@@ -99,8 +102,8 @@
             </div>
           </div>
 
-          <div class="form__fields-group  fields-group  fields-group--wide">
-            <h2 class="fields-group__title">Посещенные достопримечательности:</h2>
+          <div class="form__fields-group  form__fields-group--wide  fields-group">
+            <h2 class="fields-group__title  fields-group__title--wide  fields-group__title--visit">Посещенные достопримечательности:</h2>
 
             <div class="form__fileds-wrapper">
               <input class="form__checkbox" id="visit-devil-bridge" type="checkbox" name="visit-devil-bridge" checked>
@@ -123,8 +126,8 @@
             </div>
           </div>
 
-          <div class="form__fields-group  fields-group">
-            <h2 class="fields-group__title">Опишите свои эмоции:</h2>
+          <div class="form__fields-group  form__fields-group--wide  fields-group">
+            <h2 class="fields-group__title  fields-group__title--wide">Опишите свои эмоции:</h2>
             <textarea class="form__field  form__field--textarea" name="feedback-text" rows="8" cols="80" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
 

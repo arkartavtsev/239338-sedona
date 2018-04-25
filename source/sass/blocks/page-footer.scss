@@ -1,18 +1,20 @@
 .page-footer {
+  padding: 38px 20px 23px;
   line-height: 26px;
-  text-align: center;
 }
 
 .page-footer__hashtag {
-  padding: 36px 20px;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .page-footer__socials {
-  padding: 0 20px;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .page-footer__copyright {
-  padding: 40px 20px 23px;
+  margin: 0;
 }
 
 
@@ -20,20 +22,24 @@
   .page-footer {
     display: flex;
     align-items: center;
+    padding: 36px 0;
   }
 
   .page-footer__hashtag {
     box-sizing: border-box;
     width: 33.33%;
+    margin: 0;
   }
 
   .page-footer__socials {
     box-sizing: border-box;
     width: 33.33%;
+    margin: 0;
   }
 
   .page-footer__copyright {
     box-sizing: border-box;
     width: 33.33%;
+    margin: 0;
   }
 }

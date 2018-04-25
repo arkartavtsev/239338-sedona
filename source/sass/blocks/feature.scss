@@ -117,6 +117,7 @@
     &--primary {
       box-sizing: border-box;
       width: 33.33%;
+      padding: 50px 45px;
 
       &::after {
         border: none;
@@ -126,16 +127,75 @@
     &--secondary {
       box-sizing: border-box;
       width: 33.33%;
+      padding: 57px 45px 65px;
+      margin: 0;
+    }
+
+    &--souvenirs {
+      order: 1;
     }
   }
 
   .feature__body {
     box-sizing: border-box;
     width: 33.33%;
+    padding: 50px 45px;
+
+    &--right {
+      order: 1;
+    }
+  }
+
+  .feature__title {
+    width: 160px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    font-size: 21px;
+
+    &--secondary {
+      padding: 0;
+      padding-top: 105px;
+      background-size: 75px 75px;
+    }
+
+    &--housing {
+      background-position: 50% 3px;
+    }
+
+    &--souvenirs {
+      background-position: 50% 0;
+    }
+
+    &--food {
+      background-position: 50% 6px;
+    }
+  }
+
+  .feature__text {
+    &--secondary {
+      padding-left: 0;
+    }
   }
 
   .feature__image {
     width: 66.66%;
     height: auto;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .feature {
+    &--primary {
+      padding: 50px 55px 75px;
+    }
+
+    &--secondary {
+      padding: 57px 55px 85px;
+    }
+  }
+
+  .feature__body {
+    padding: 50px 65px 60px;
   }
 }

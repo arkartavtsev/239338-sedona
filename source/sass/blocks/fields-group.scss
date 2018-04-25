@@ -1,6 +1,4 @@
 .fields-group {
-  padding: 21px 20px 25px;
-
   @include border-bottom;
 
   &:last-of-type {
@@ -13,7 +11,7 @@
   margin-bottom: 22px;
   font-weight: bold;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
   text-align: center;
   color: black;
 }
@@ -21,15 +19,21 @@
 
 @media (min-width: $tablet-width) {
   .fields-group {
-    padding: 0;
     border-bottom: none;
+  }
+
+  .fields-group__title {
+    margin-bottom: 60px;
+    font-size: 21px;
+    text-align: left;
 
     &--wide {
       width: 100%;
+      text-align: center;
     }
-  }
 
-  .fields-group--impression {
-    order: -1;
+    &--contacts {
+      margin-bottom: 30px;
+    }
   }
 }

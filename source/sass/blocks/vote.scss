@@ -1,6 +1,12 @@
+.vote {
+  display: flex;
+  align-items: flex-start;
+}
+
 .vote__btn {
   box-sizing: border-box;
   padding: 0;
+  margin-right: 16px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -14,6 +20,18 @@
 }
 
 .vote__counter {
+  padding-top: 1px;
   font-weight: bold;
   color: black;
+}
+
+
+@media (min-width: $tablet-width) {
+  .vote {
+    width: 84px;
+  }
+
+  .vote__btn {
+    margin-right: 11px;
+  }
 }
