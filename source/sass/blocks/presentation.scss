@@ -1,6 +1,53 @@
+.presentation {
+  text-align: center;
+  margin-bottom: 42px;
+}
+
 .presentation__title {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 30px;
   font-weight: bold;
   font-size: 18px;
-  line-height: 1.44;
+  line-height: 26px;
   color: black;
+}
+
+.presentation__text {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .presentation {
+    margin-bottom: 30px;
+  }
+
+  .presentation__title {
+    width: 430px;
+    font-size: 30px;
+  }
+
+  .presentation__text {
+    width: 430px;
+    margin-bottom: 75px;
+  }
+
+  .presentation__player {
+    width: 648px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .presentation {
+    margin-bottom: 85px;
+  }
+
+  .presentation__player {
+    width: 800px;
+  }
 }

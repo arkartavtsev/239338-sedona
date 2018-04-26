@@ -1,3 +1,45 @@
 .page-footer {
+  padding: 38px 20px 23px;
   line-height: 26px;
+}
+
+.page-footer__hashtag {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.page-footer__socials {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.page-footer__copyright {
+  margin: 0;
+}
+
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    align-items: center;
+    padding: 36px 0;
+  }
+
+  .page-footer__hashtag {
+    box-sizing: border-box;
+    width: 33.33%;
+    margin: 0;
+  }
+
+  .page-footer__socials {
+    box-sizing: border-box;
+    width: 33.33%;
+    margin: 0;
+  }
+
+  .page-footer__copyright {
+    box-sizing: border-box;
+    width: 33.33%;
+    margin: 0;
+  }
 }

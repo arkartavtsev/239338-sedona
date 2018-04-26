@@ -1,0 +1,33 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__bar {
+  position: relative;
+  // временно
+  height: 56px;
+}
+
+.page-header__page-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-header__main-nav {
+  order: -1;
+}
+
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: block;
+  }
+
+  .page-header__bar {
+    // временно
+    height: 0;
+  }
+}

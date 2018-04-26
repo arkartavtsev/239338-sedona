@@ -1,9 +1,11 @@
 .btn {
+  display: block;
   box-sizing: border-box;
+  padding: 16px 32px;
   font-family: inherit;
   font-weight: bold;
   font-size: 21px;
-  line-height: 1.24;
+  line-height: 26px;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
