@@ -3,3 +3,136 @@
   width: 100%;
   height: auto;
 }
+
+.player__controls-pane {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 280px;
+  padding: 23px;
+  margin: 0 auto;
+  background-color: $light-gray;
+}
+
+.player__status-bar {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  padding: 21px 22px;
+  background-color: rgba(black, 0.6%);
+}
+
+.player__timeline {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(white, 0.2%);
+}
+
+.player__time-pointer {
+  position: absolute;
+  top: 50%;
+  left: 36px;
+  width: 9px;
+  height: 9px;
+  background-color: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.player__control {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--replay {
+    margin-right: auto;
+  }
+
+  &--subtitles {
+    margin-right: 30px;
+  }
+
+  &:hover .player__icon {
+    fill: $light-black;
+  }
+
+  &:active .player__icon {
+    fill: rgba($light-black, 0.3%);
+  }
+}
+
+.player__icon {
+  // IE fix
+  position: relative;
+  display: block;
+  fill: rgb(92, 104, 112);
+
+  &--replay {
+    width: 16px;
+    height: 20px;
+  }
+
+  &--subtitles {
+    width: 32px;
+    height: 20px;
+  }
+
+  &--fullscreen {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .player {
+    position: relative;
+  }
+
+  .player__controls-pane {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 36px 41px 36px 35px;
+    background-color: rgba(black, 0.6%);
+  }
+
+  .player__status-bar {
+    flex-grow: 1;
+    position: static;
+    padding: 0;
+    margin-right: 42px;
+    background-color: transparent;
+  }
+
+  .player__time-pointer {
+    left: 113px;
+  }
+
+  .player__control {
+    &--replay {
+      margin-right: 42px;
+    }
+
+    &--subtitles {
+      margin-right: 31px;
+    }
+
+    &:hover .player__icon {
+      fill: rgba(white, 0.6%);
+    }
+
+    &:active .player__icon {
+      fill: rgba(white, 0.3%);
+    }
+  }
+
+  .player__icon {
+    fill: white;
+  }
+}
