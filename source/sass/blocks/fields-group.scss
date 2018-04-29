@@ -1,9 +1,5 @@
 .fields-group {
   @include border-bottom;
-
-  &:last-of-type {
-    border-bottom: none;
-  }
 }
 
 .fields-group__title {
@@ -28,12 +24,44 @@
     text-align: left;
 
     &--wide {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
       width: 100%;
       text-align: center;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 124px;
+        height: 1px;
+        background-color: rgb(219, 219, 219);
+      }
     }
 
     &--contacts {
       margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .fields-group__title {
+    &--wide {
+      &::before,
+      &::after {
+        width: 280px;
+      }
+    }
+
+    &--for-selectors {
+      margin-left: 78px;
+    }
+
+    &--contacts {
+      margin-bottom: 70px;
     }
   }
 }

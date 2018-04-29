@@ -9,6 +9,7 @@
   &:last-of-type {
     padding-bottom: 0;
     margin-bottom: 51px;
+    border-bottom: none;
   }
 }
 
@@ -21,6 +22,30 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+
+  &--contacts {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 58px;
+      height: 58px;
+      background-color: $gray;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--tel::after {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email::after {
+    background-image: url("../img/icon-mail.svg");
+  }
 }
 
 .form__label {
@@ -28,16 +53,87 @@
   margin-right: 14px;
   cursor: pointer;
 
-  &--wide {
-    width: 100%;
-    margin-bottom: 9px;
-  }
-
   &--selectable {
+    position: relative;
+    box-sizing: border-box;
+    padding: 15px 0;
+    padding-left: 78px;
+    margin-right: 0;
     font-weight: bold;
     font-size: 18px;
     text-transform: none;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 56px;
+      height: 56px;
+      margin-right: 22px;
+      background-color: $light-gray;
+    }
+
+    &:hover::before {
+      background-color: $gray;
+    }
+
+    &:active::before {
+      background-color: $dark-gray;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
   }
+
+  &--for-radiobtn {
+    margin-bottom: 13px;
+
+    &::before {
+      border-radius: 50%;
+    }
+  }
+
+  &--for-checkbox {
+    margin-bottom: 24px;
+
+    &::before {
+      border-radius: 5px;
+    }
+  }
+
+  &--contacts {
+    width: 100%;
+    margin-bottom: 9px;
+    margin-left: 22px;
+  }
+}
+
+.form__checkbox:checked + .form__label--selectable::after,
+.form__radiobtn:checked + .form__label--selectable::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  transform: translateY(-50%);
+}
+
+.form__radiobtn:checked + .form__label--for-radiobtn::after {
+  width: 22px;
+  height: 22px;
+  background-color: $light-black;
+  border-radius: 50%;
+}
+
+.form__checkbox:checked + .form__label--for-checkbox::after {
+  width: 24px;
+  height: 16px;
+  background: url("../img/icon-tick.svg") 0 0 no-repeat;
 }
 
 .form__field {
@@ -57,7 +153,12 @@
     display: block;
     width: 100%;
     height: 160px;
+    resize: none;
     padding: 18px 20px;
+  }
+
+  &--contacts {
+    padding-right: 78px;
   }
 
   &:hover {
@@ -73,6 +174,8 @@
 
   &::placeholder {
     color: black;
+    // Firefox fix
+    opacity: 1;
   }
 }
 
@@ -97,6 +200,7 @@
   }
 
   .form__fields-group {
+    width: 100%;
     padding: 0;
     margin-bottom: 72px;
 
@@ -108,12 +212,23 @@
       order: -1;
     }
 
-    &--second {
-      width: 265px;
+    &--left-column {
+      position: relative;
+      width: 323px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: rgb(219, 219, 219);
+      }
     }
 
-    &--wide {
-      width: 100%;
+    &--right-column {
+      width: 265px;
     }
 
     &--contacts {
@@ -121,10 +236,27 @@
     }
   }
 
+  .form__selectors-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 95px;
+    margin-bottom: -32px;
+  }
+
   .form__label {
-    &--contacts {
-      width: 100%;
-      margin-left: 24px;
+    &--for-checkbox {
+      width: 200px;
+      margin-bottom: 32px;
+
+      // IE fix
+      &:nth-of-type(odd) {
+        margin-right: auto;
+      }
+    }
+
+    &--for-radiobtn {
+      margin-bottom: 22px;
     }
   }
 
@@ -147,10 +279,12 @@
   }
 
   .form__fields-group {
-    width: 400px;
+    &--left-column {
+      width: 480px;
+    }
 
-    &--wide {
-      width: 100%;
+    &--right-column {
+      width: 400px;
     }
 
     &--contacts {
@@ -160,10 +294,10 @@
     }
   }
 
-  .fields-group__title {
-    &--contacts {
-      margin-bottom: 70px;
-    }
+  .form__selectors-container {
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 0;
   }
 
   .form__fileds-wrapper {
@@ -173,8 +307,17 @@
   }
 
   .form__label {
+    &--for-checkbox {
+      margin-bottom: 0;
+
+      &:nth-of-type(odd) {
+        margin-right: 0;
+      }
+    }
+
     &--contacts {
       width: auto;
+      margin-bottom: 0;
       margin-left: 0;
     }
   }
