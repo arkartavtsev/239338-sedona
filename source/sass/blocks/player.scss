@@ -1,7 +1,19 @@
+.player {
+  width: 320px;
+}
+
 .player__video-frame {
-  display: block;
-  width: 100%;
-  height: auto;
+  width: 320px;
+  height: 200px;
+  background-color: $light-gray;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
 }
 
 .player__controls-pane {
@@ -92,6 +104,17 @@
 @media (min-width: $tablet-width) {
   .player {
     position: relative;
+    width: 648px;
+  }
+
+  .player__video-frame {
+    width: 648px;
+    height: 500px;
+    background-image: url("../img/video-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
   }
 
   .player__controls-pane {
@@ -134,5 +157,21 @@
 
   .player__icon {
     fill: white;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .presentation__player {
+    width: 800px;
+  }
+
+  .player__video-frame {
+    width: 800px;
+    background-image: url("../img/video-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
   }
 }

@@ -6,8 +6,8 @@
 
 .snapshot__image {
   display: block;
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  height: auto;
   margin-bottom: 17px;
   cursor: zoom-in;
 }
@@ -35,7 +35,7 @@
     background-color: $light-gray;
     border: none;
 
-    &:first-of-type {
+    &--primary {
       width: 100%;
     }
 
@@ -45,8 +45,7 @@
   }
 
   .snapshot__image {
-    width: 100%;
-    height: auto;
+
     margin-bottom: 0;
   }
 
@@ -68,6 +67,10 @@
   .snapshot {
     position: relative;
     width: 33.33%;
+
+    &--primary {
+      width: 100%;
+    }
   }
 
   .snapshot__bar {

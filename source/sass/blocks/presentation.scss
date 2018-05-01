@@ -36,7 +36,6 @@
   }
 
   .presentation__player {
-    width: 648px;
     margin: 0 auto;
   }
 }
@@ -45,9 +44,5 @@
 @media (min-width: $desktop-width) {
   .presentation {
     margin-bottom: 85px;
-  }
-
-  .presentation__player {
-    width: 800px;
   }
 }
