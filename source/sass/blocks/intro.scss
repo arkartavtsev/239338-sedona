@@ -5,7 +5,18 @@
   @include border-bottom;
 
   &--index {
+    position: relative;
     border-bottom: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 100%;
+      left: 0;
+      height: 36px;
+      background: url("../img/bg-triangle.svg") 50% 0 / 100% auto no-repeat;
+    }
   }
 
   &--feedback {
@@ -17,8 +28,13 @@
   padding: 52px 0 67px;
   margin-bottom: 42px;
   background-color: rgb(225, 238, 247);
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-image:
+    url("../img/bg-intro-triangle-mobile.svg"),
+    url("../img/bg-back-mobile@1x.jpg");
   background-position: 50% 100%;
+  background-size:
+    100% 26px,
+    768px auto;
   background-repeat: no-repeat;
 
   &--index {
@@ -26,8 +42,9 @@
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 768px auto;
+    background-image:
+      url("../img/bg-intro-triangle-mobile.svg"),
+      url("../img/bg-back-mobile@2x.jpg");
   }
 }
 
@@ -70,6 +87,10 @@
 
     &--index {
       padding-bottom: 50px;
+
+      &::after {
+        display: none;
+      }
     }
 
     &--feedback {
@@ -80,7 +101,12 @@
   .intro__header {
     padding: 95px 0 117px;
     margin-bottom: 70px;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-image:
+      url("../img/bg-intro-triangle-tablet.svg"),
+      url("../img/bg-back-tablet@1x.jpg");
+    background-size:
+      100% 57px,
+      768px auto;
 
     &--index {
       padding: 77px 0 91px;
@@ -88,8 +114,9 @@
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-size: 768px auto;
+      background-image:
+        url("../img/bg-intro-triangle-tablet.svg"),
+        url("../img/bg-back-tablet@2x.jpg");
     }
   }
 
@@ -135,7 +162,12 @@
   .intro__header {
     padding: 102px 0 120px;
     margin-bottom: 110px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-image:
+      url("../img/bg-intro-triangle-desktop.svg"),
+      url("../img/bg-back-desktop@1x.jpg");
+    background-size:
+      100% 57px,
+      1200px auto;
 
     &--index {
       padding: 78px 0 90px;
@@ -143,8 +175,9 @@
     }
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-back-desktop@2x.jpg");
-      background-size: 1200px auto;
+      background-image:
+        url("../img/bg-intro-triangle-desktop.svg"),
+        url("../img/bg-back-desktop@2x.jpg");
     }
   }
 

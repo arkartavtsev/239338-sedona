@@ -34,6 +34,10 @@
 
 .feature__body {
   padding: 43px 20px;
+
+  &--first {
+    padding-top: 55px;
+  }
 }
 
 .feature__title {
