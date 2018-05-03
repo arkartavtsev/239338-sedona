@@ -108,6 +108,11 @@
         <section class="sedona-location">
           <h2 class="visually-hidden">Местоположение Седоны</h2>
           <p class="visually-hidden">86336 Седона, штат Аризона, США</p>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x,  img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x,  img/bg-map-tablet@2x.jpg 2x">
+            <img class="sedona-location__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="86336 Седона, штат Аризона, США">
+          </picture>
           <div class="sedona-location__map" id="map"></div>
         </section>
 
@@ -148,6 +153,8 @@
     </div>
 
     <script src="js/picturefill.min.js"></script>
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDz5wQ-z_l-PufvUBx6d5FXDnwb-3dJYRU&callback=initMap"></script>
 
   </body>
 
