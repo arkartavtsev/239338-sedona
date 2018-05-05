@@ -1,5 +1,5 @@
 .gallery {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 @media (min-width: $tablet-width) {
@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 60px;
-    margin-bottom: 69px;
+    margin-bottom: 66px;
   }
 }
 
@@ -15,5 +15,6 @@
 @media (min-width: $desktop-width) {
   .gallery {
     padding: 0;
+    margin-bottom: 70px;
   }
 }

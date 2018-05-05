@@ -6,7 +6,7 @@
 
   &--primary {
     position: relative;
-    padding: 30px 35px;
+    padding: 27px 35px 28px;
 
     &::after {
       content: "";
@@ -24,7 +24,7 @@
   }
 
   &--secondary {
-    margin-bottom: 26px;
+    margin-bottom: 17px;
   }
 
   &--secondary:last-child {
@@ -33,7 +33,7 @@
 }
 
 .feature__body {
-  padding: 43px 20px;
+  padding: 38px 20px 40px;
 
   &--first {
     padding-top: 55px;
@@ -42,7 +42,7 @@
 
 .feature__title {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -57,34 +57,35 @@
 
     content: "– №" counter(list-counter) " –";
     display: block;
-    margin-top: 14px;
+    margin-top: 8px;
     font-weight: normal;
     font-size: 14px;
     line-height: 1.5;
   }
 
   &--secondary {
-    padding: 6px 0;
-    margin-bottom: 14px;
+    padding: 10px 0 4px;
+    margin-bottom: 10px;
     padding-left: 50px;
     background-repeat: no-repeat;
   }
 
   &--housing {
     background-image: url("../img/icon-house.svg");
+    background-position: 2px 0;
     background-size: 37px 37px;
   }
 
   &--souvenirs {
-    padding-top: 9px;
-    padding-bottom: 3px;
     background-image: url("../img/icon-gift.svg");
-    background-position: 3px 0;
+    background-position: 5px 0;
     background-size: 32px 38px;
   }
 
   &--food {
+    padding-bottom: 7px;
     background-image: url("../img/icon-burger.svg");
+    background-position: 0 7px;
     background-size: 38px 35px;
   }
 }
@@ -95,6 +96,10 @@
   &--secondary {
     padding-left: 50px;
   }
+}
+
+.feature__text-wrap {
+  display: none;
 }
 
 .feature__image {
@@ -132,7 +137,7 @@
     &--primary {
       box-sizing: border-box;
       width: 33.33%;
-      padding: 50px 45px;
+      padding: 44px;
 
       &::after {
         border: none;
@@ -142,7 +147,7 @@
     &--secondary {
       box-sizing: border-box;
       width: 33.33%;
-      padding: 57px 45px 65px;
+      padding: 56px 45px 61px;
       margin: 0;
     }
 
@@ -153,8 +158,8 @@
 
   .feature__body {
     box-sizing: border-box;
-    width: 33.33%;
-    padding: 50px 45px;
+    width: 33.34%;
+    padding: 45px;
 
     &--right {
       order: 1;
@@ -169,7 +174,8 @@
 
     &--secondary {
       padding: 0;
-      padding-top: 105px;
+      padding-top: 102px;
+      margin-bottom: 21px;
     }
 
     &--housing {
@@ -220,16 +226,20 @@
 @media (min-width: $desktop-width) {
   .feature {
     &--primary {
-      padding: 50px 55px 75px;
+      padding: 45px 55px 65px;
     }
 
     &--secondary {
-      padding: 57px 55px 85px;
+      padding: 57px 55px 82px;
     }
   }
 
   .feature__body {
-    padding: 50px 65px 60px;
+    padding: 52px 65px 58px;
+  }
+
+  .feature__text-wrap {
+    display: inline;
   }
 
   .feature__image {

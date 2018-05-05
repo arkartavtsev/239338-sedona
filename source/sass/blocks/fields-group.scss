@@ -4,12 +4,20 @@
 
 .fields-group__title {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 21px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   text-align: center;
   color: black;
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
+
+  &--review {
+    margin-bottom: 16px;
+  }
 }
 
 
@@ -19,7 +27,7 @@
   }
 
   .fields-group__title {
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     font-size: 21px;
     text-align: left;
 
@@ -41,7 +49,11 @@
     }
 
     &--contacts {
-      margin-bottom: 30px;
+      margin-bottom: 24px;
+    }
+
+    &--visit {
+      margin-bottom: 42px;
     }
   }
 }
@@ -61,7 +73,11 @@
     }
 
     &--contacts {
-      margin-bottom: 70px;
+      margin-bottom: 73px;
+    }
+
+    &--visit {
+      margin-bottom: 40px;
     }
   }
 }

@@ -32,6 +32,13 @@
   }
 
   .vote__btn {
-    margin-right: 11px;
+    margin-right: 10px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .vote {
+    width: 64px;
   }
 }

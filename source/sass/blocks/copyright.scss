@@ -4,11 +4,14 @@
   align-items: center;
 }
 
+.copyright__link {
+  margin-left: 12px;
+}
+
 .copyright__logo {
   display: block;
   width: 27px;
   height: 34px;
-  margin-left: 12px;
   fill: black;
 
   &:hover {
