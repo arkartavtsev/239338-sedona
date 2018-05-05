@@ -9,13 +9,18 @@
   </head>
 
   <body class="page-body">
-    <div class="page-body__container  container">
+
+    <div class="page-body__container">
 
       <header class="page-header">
 
         <div class="page-header__bar">
           <a class="page-header__page-logo  page-logo" href="index.html">
-            <img class="page-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="page-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
+            </picture>
           </a>
           <button class="page-header__menu-toggle  menu-toggle" type="button">Открыть меню</button>
         </div>
@@ -44,7 +49,7 @@
             <img class="intro__graphic-text" src="img/text-sedona.svg" width="229" height="39" alt="Sedona">
           </header>
           <h1 class="intro__title">Оставьте свой отзыв</h1>
-          <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
+          <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о посещенных вами достопримечательностях</p>
         </div>
 
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
@@ -115,7 +120,7 @@
           </div>
 
           <div class="form__fields-group  fields-group">
-            <h2 class="fields-group__title  fields-group__title--wide">Опишите свои эмоции:</h2>
+            <h2 class="fields-group__title  fields-group__title--wide  fields-group__title--review">Опишите свои эмоции:</h2>
             <textarea class="form__field  form__field--textarea" name="feedback-text" rows="8" cols="80" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
 
@@ -174,6 +179,9 @@
       </div>
 
     </div>
+
+    <script src="js/picturefill.min.js"></script>
+
   </body>
 
 </html>

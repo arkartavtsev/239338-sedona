@@ -1,4 +1,39 @@
-.sedona-location__map {
+.sedona-location {
+  position: relative;
   height: 350px;
-  background: url("../img/bg-map-mobile@1x.jpg") 0% 0% / cover no-repeat;
+  overflow-y: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 17px;
+    height: 17px;
+    background-color: $light-blue;
+    border: 5px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--js::after {
+    display: none;
+  }
+}
+
+.sedona-location__img {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+
+  &--js {
+    display: none;
+  }
+}
+
+.sedona-location__map {
+  width: 100%;
+  height: 373px;
 }

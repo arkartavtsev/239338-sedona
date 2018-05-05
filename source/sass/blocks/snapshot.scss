@@ -1,20 +1,19 @@
 .snapshot {
-  padding: 22px 20px;
+  padding: 22px 20px 17px;
 
   @include border-bottom;
 }
 
 .snapshot__image {
   display: block;
-  width: 280px;
-  height: 280px;
-  margin-bottom: 17px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
   cursor: zoom-in;
 }
 
 .snapshot__title {
   margin: 0;
-  margin-bottom: 4px;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
@@ -35,7 +34,7 @@
     background-color: $light-gray;
     border: none;
 
-    &:first-of-type {
+    &--primary {
       width: 100%;
     }
 
@@ -45,8 +44,6 @@
   }
 
   .snapshot__image {
-    width: 100%;
-    height: auto;
     margin-bottom: 0;
   }
 
@@ -54,7 +51,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 17px 20px;
+    padding: 15px 20px 17px;
     padding-right: 0;
   }
 
@@ -68,6 +65,10 @@
   .snapshot {
     position: relative;
     width: 33.33%;
+
+    &--primary {
+      width: 100%;
+    }
   }
 
   .snapshot__bar {
@@ -75,6 +76,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    padding: 15px 21px 17px;
     color: white;
     background-color: rgba(black, 0.3%);
   }

@@ -7,9 +7,11 @@
   position: relative;
   // временно
   height: 56px;
+  box-shadow: 0 -2px 7px 0 rgba(0, 1, 1, 0.2);
 }
 
 .page-header__page-logo {
+  z-index: 1;
   position: absolute;
   top: 0;
   left: 50%;
@@ -29,5 +31,6 @@
   .page-header__bar {
     // временно
     height: 0;
+    box-shadow: none;
   }
 }

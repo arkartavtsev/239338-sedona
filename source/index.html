@@ -9,13 +9,18 @@
   </head>
 
   <body class="page-body">
-    <div class="page-body__container  container">
+
+    <div class="page-body__container">
 
       <header class="page-header">
 
         <div class="page-header__bar">
           <a class="page-header__page-logo  page-logo">
-            <img class="page-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img class="page-logo__image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Седона логотип">
+            </picture>
           </a>
           <button class="page-header__menu-toggle  menu-toggle" type="button">Открыть меню</button>
         </div>
@@ -52,7 +57,7 @@
 
           <ol class="features__list">
             <li class="feature  feature--highlighted">
-              <div class="feature__body">
+              <div class="feature__body  feature__body--first">
                 <h3 class="feature__title  feature__title--primary  feature__title--highlighted">Настоящий городок</h3>
                 <p class="feature__text">Седона не&nbsp;аттракцион для туристов, там течет своя жизнь</p>
               </div>
@@ -64,18 +69,18 @@
                 </li>
                 <li class="feature  feature--secondary  feature--souvenirs">
                   <h4 class="feature__title  feature__title--secondary  feature__title--souvenirs">Сувениры</h4>
-                  <p class="feature__text  feature__text--secondary">Не только китайского, но и местного производства!</p>
+                  <p class="feature__text  feature__text--secondary">Не только китайского,<br class="feature__text-wrap"> но и местного производства!</p>
                 </li>
                 <li class="feature  feature--secondary">
                   <h4 class="feature__title  feature__title--secondary  feature__title--food">Еда</h4>
-                  <p class="feature__text  feature__text--secondary">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+                  <p class="feature__text  feature__text--secondary">Всегда заказывайте фирменный бургер, Вы&nbsp;не разочаруетесь!</p>
                 </li>
               </ul>
             </li>
             <li class="feature  feature--highlighted">
               <div class="feature__body  feature__body--right">
                 <h3 class="feature__title  feature__title--primary  feature__title--highlighted">Там есть Мост&nbsp;Дьявола</h3>
-                <p class="feature__text">Да, по&nbsp;нему можно пройти! Если вы осмелитесь, конечно</p>
+                <p class="feature__text">Да, по&nbsp;нему можно пройти!<br class="feature__text-wrap"> Если&nbsp;вы осмелитесь, конечно</p>
               </div>
               <div class="feature__image  feature__image--bridge"></div>
             </li>
@@ -103,6 +108,11 @@
         <section class="sedona-location">
           <h2 class="visually-hidden">Местоположение Седоны</h2>
           <p class="visually-hidden">86336 Седона, штат Аризона, США</p>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x,  img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x,  img/bg-map-tablet@2x.jpg 2x">
+            <img class="sedona-location__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="86336 Седона, штат Аризона, США">
+          </picture>
           <div class="sedona-location__map" id="map"></div>
         </section>
 
@@ -141,6 +151,11 @@
       </footer>
 
     </div>
+
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDz5wQ-z_l-PufvUBx6d5FXDnwb-3dJYRU&callback=initMap"></script>
+
   </body>
 
 </html>

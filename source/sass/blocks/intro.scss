@@ -1,25 +1,51 @@
 .intro {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 26px;
 
   @include border-bottom;
 
   &--index {
+    position: relative;
     border-bottom: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 100%;
+      left: 0;
+      height: 36px;
+      background: url("../img/bg-triangle.svg") 50% 0 / 100% auto no-repeat;
+    }
   }
 
   &--feedback {
-    padding-bottom: 20px;
+    padding-bottom: 16px;
   }
 }
 
 .intro__header {
   padding: 52px 0 67px;
-  margin-bottom: 42px;
-  background: rgb(225, 238, 247) url("../img/bg-back-mobile@1x.jpg") 50% 50% / cover no-repeat;
+  margin-bottom: 38px;
+  background-color: rgb(225, 238, 247);
+  background-image:
+    url("../img/bg-intro-triangle-mobile.svg"),
+    url("../img/bg-back-mobile@1x.jpg");
+  background-position: 50% 100%;
+  background-size:
+    100% 26px,
+    768px auto;
+  background-repeat: no-repeat;
 
   &--index {
     padding: 90px 0 85px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/bg-intro-triangle-mobile.svg"),
+      url("../img/bg-back-mobile@2x.jpg");
   }
 }
 
@@ -38,7 +64,7 @@
 .intro__title {
   width: 270px;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 27px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -57,25 +83,41 @@
 
 @media (min-width: $tablet-width) {
   .intro {
-    padding-bottom: 70px;
+    padding-bottom: 69px;
     border-bottom: none;
 
     &--index {
       padding-bottom: 50px;
+
+      &::after {
+        display: none;
+      }
     }
 
     &--feedback {
-      padding-bottom: 80px;
+      padding-bottom: 74px;
     }
   }
 
   .intro__header {
     padding: 95px 0 117px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
+    background-image:
+      url("../img/bg-intro-triangle-tablet.svg"),
+      url("../img/bg-back-tablet@1x.jpg");
+    background-size:
+      100% 57px,
+      768px auto;
 
     &--index {
       padding: 77px 0 91px;
       margin-bottom: 50px;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/bg-intro-triangle-tablet.svg"),
+        url("../img/bg-back-tablet@2x.jpg");
     }
   }
 
@@ -92,10 +134,11 @@
   .intro__title {
     width: 450px;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     font-size: 30px;
 
     &--index {
+      margin-bottom: 28px;
       font-size: 21px;
     }
   }
@@ -113,18 +156,36 @@
 
 @media (min-width: $desktop-width) {
   .intro {
+    padding-bottom: 71px;
+
+    &--index {
+      padding-bottom: 50px;
+    }
+
     &--feedback {
-      padding-bottom: 65px;
+      padding-bottom: 59px;
     }
   }
 
   .intro__header {
     padding: 102px 0 120px;
-    margin-bottom: 110px;
+    margin-bottom: 111px;
+    background-image:
+      url("../img/bg-intro-triangle-desktop.svg"),
+      url("../img/bg-back-desktop@1x.jpg");
+    background-size:
+      100% 57px,
+      1200px auto;
 
     &--index {
       padding: 78px 0 90px;
       margin-bottom: 50px;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image:
+        url("../img/bg-intro-triangle-desktop.svg"),
+        url("../img/bg-back-desktop@2x.jpg");
     }
   }
 
@@ -135,6 +196,14 @@
     &--index {
       width: 460px;
       height: 350px;
+    }
+  }
+
+  .intro__title {
+    margin-bottom: 31px;
+
+    &--index {
+      margin-bottom: 28px;
     }
   }
 }
