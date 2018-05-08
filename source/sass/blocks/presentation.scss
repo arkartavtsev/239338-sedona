@@ -4,7 +4,8 @@
 }
 
 .presentation__title {
-  width: 260px;
+  width: 81.25%;
+  max-width: 430px;
   margin: 0 auto;
   margin-bottom: 26px;
   font-weight: bold;
@@ -14,9 +15,10 @@
 }
 
 .presentation__text {
-  width: 260px;
+  width: 81.25%;
+  max-width: 430px;
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 35px;
 }
 
 
@@ -26,13 +28,11 @@
   }
 
   .presentation__title {
-    width: 430px;
     margin-bottom: 31px;
     font-size: 30px;
   }
 
   .presentation__text {
-    width: 430px;
     margin-bottom: 73px;
   }
 
