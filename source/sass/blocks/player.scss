@@ -11,10 +11,11 @@
 .player__controls-pane {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   box-sizing: border-box;
   width: 87.5%;
-  padding: 23px;
+  padding: 18px;
   margin: 0 auto;
   background-color: $light-gray;
 }
@@ -48,7 +49,7 @@
 }
 
 .player__control {
-  padding: 0;
+  padding: 5px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -58,7 +59,7 @@
   }
 
   &--subtitles {
-    margin-right: 30px;
+    margin-right: 21px;
   }
 
   &:hover .player__icon {
@@ -104,7 +105,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 36px 41px 36px 35px;
+    padding: 31px 36px 31px 30px;
     background-color: rgba(black, 0.6%);
   }
 
@@ -126,7 +127,7 @@
     }
 
     &--subtitles {
-      margin-right: 31px;
+      margin-right: 21px;
     }
 
     &:hover .player__icon {
@@ -145,7 +146,11 @@
 
 
 @media (min-width: $desktop-width) {
+  .player__controls-pane {
+    padding-right: 38px;
+  }
+
   .player__time-pointer {
-    left: 20.89%;
+    left: 20%;
   }
 }

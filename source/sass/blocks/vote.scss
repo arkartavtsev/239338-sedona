@@ -1,6 +1,7 @@
 .vote {
   display: flex;
   align-items: flex-start;
+  width: 64px;
 }
 
 .vote__btn {
@@ -23,22 +24,12 @@
   padding-top: 1px;
   font-weight: bold;
   color: black;
+  overflow: hidden;
 }
 
 
 @media (min-width: $tablet-width) {
-  .vote {
-    width: 84px;
-  }
-
   .vote__btn {
     margin-right: 10px;
-  }
-}
-
-
-@media (min-width: $desktop-width) {
-  .vote {
-    width: 64px;
   }
 }
