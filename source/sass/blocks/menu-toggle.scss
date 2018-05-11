@@ -1,3 +1,19 @@
 .menu-toggle {
-  display: none;
+  padding: 0;
+  width: 23px;
+  height: 21px;
+  font-size: 0;
+  background-color: transparent;
+  background-size: 23px 21px;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+
+  &--open {
+    background-image: url("../img/icon-menu.svg");
+  }
+
+  &--close {
+    background-image: url("../img/icon-cross.svg");
+  }
 }
