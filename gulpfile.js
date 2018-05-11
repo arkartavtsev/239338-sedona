@@ -84,7 +84,9 @@ gulp.task("images", function() {
       ),
       imgMinify.svgo({
         plugins: [
-          {removeViewBox: false}
+          {removeViewBox: false},
+          {convertPathData: false},
+          {mergePaths: false}
         ]
       })
     ]))

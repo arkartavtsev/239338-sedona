@@ -91,6 +91,8 @@
   margin-right: 22px;
   background-color: $light-gray;
   cursor: pointer;
+  // IE fix
+  pointer-events: none;
 
   &--radiobtn {
     border-radius: 50%;

@@ -1,1 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="26" fill="#fff"><path d="M0 0l160 26H0zM160 26L320 0v26z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="26" viewBox="0 0 320 26">
+  <polygon fill="#FFFFFF" points="0,0 160,26 0,26"/>
+  <polygon fill="#FFFFFF" points="160,26 320,0 320,26"/>
+</svg>
