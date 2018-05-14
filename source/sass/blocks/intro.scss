@@ -1,6 +1,6 @@
 .intro {
-  text-align: center;
   padding-bottom: 26px;
+  text-align: center;
 
   @include border-bottom;
 
@@ -62,7 +62,7 @@
 }
 
 .intro__title {
-  width: 84.375%;
+  width: 81.25%;
   max-width: 450px;
   margin: 0 auto;
   margin-bottom: 27px;
@@ -138,6 +138,7 @@
   }
 
   .intro__title {
+    width: 84.375%;
     margin: 0 auto;
     margin-bottom: 30px;
     font-size: 30px;
@@ -146,10 +147,6 @@
       margin-bottom: 28px;
       font-size: 21px;
     }
-  }
-
-  .intro__text {
-    margin: 0 auto;
   }
 }
 
@@ -205,9 +202,5 @@
     &--index {
       margin-bottom: 28px;
     }
-  }
-
-  .intro__text {
-    margin: 0 auto;
   }
 }

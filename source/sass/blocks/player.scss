@@ -110,15 +110,15 @@
   }
 
   .player__status-bar {
-    flex-grow: 1;
     position: static;
+    flex-grow: 1;
     padding: 0;
     margin-right: 42px;
     background-color: transparent;
   }
 
   .player__time-pointer {
-    left: 29%;
+    left: 28.8%;
   }
 
   .player__control {
@@ -151,6 +151,6 @@
   }
 
   .player__time-pointer {
-    left: 20%;
+    left: 20.6%;
   }
 }

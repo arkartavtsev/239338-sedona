@@ -1,19 +1,22 @@
 .menu-toggle {
-  padding: 0;
   width: 23px;
-  height: 21px;
-  font-size: 0;
+  height: 22px;
+  padding: 0;
   background-color: transparent;
-  background-size: 23px 21px;
-  background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+}
+
+.menu-toggle__icon {
+  // IE fix
+  position: relative;
+  display: none;
 
   &--open {
-    background-image: url("../img/icon-menu.svg");
+    fill: $light-blue;
   }
 
   &--close {
-    background-image: url("../img/icon-cross.svg");
+    fill: white;
   }
 }

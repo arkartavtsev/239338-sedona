@@ -24,11 +24,10 @@
 
 .page-header__menu-toggle {
   display: none;
-  background: red;
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: $mobile-only-width) {
   .page-header__main-nav--close {
     display: none;
   }
@@ -42,9 +41,17 @@
       bottom: 18px;
     }
 
+    &--open .menu-toggle__icon--open {
+      display: block;
+    }
+
     &--close {
       display: block;
       top: 17px;
+    }
+
+    &--close .menu-toggle__icon--close {
+      display: block;
     }
   }
 }

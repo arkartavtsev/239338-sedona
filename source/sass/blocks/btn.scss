@@ -2,10 +2,10 @@
   display: block;
   box-sizing: border-box;
   padding: 16px 32px;
-  font-family: inherit;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+  font-family: inherit;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
@@ -22,6 +22,11 @@
     background-color: $light-blue-active;
   }
 
+  // Firefox fix
+  &:focus {
+    outline: 2px solid $light-blue-active;
+  }
+
   &:disabled,
   &:disabled:hover,
   &:disabled:active,
@@ -29,7 +34,7 @@
   &--disabled:hover,
   &--disabled:active {
     color: white;
-    background-color: rgb(230, 230, 230);
+    background-color: $gray;
     cursor: default;
   }
 }

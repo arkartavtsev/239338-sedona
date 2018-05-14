@@ -4,6 +4,10 @@
   @include border-bottom;
 }
 
+.snapshot__image-link {
+  display: block;
+}
+
 .snapshot__image {
   display: block;
   width: 100%;
@@ -51,7 +55,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px 17px;
+    padding: 15px 15px 17px 20px;
+  }
+
+  .snapshot__description {
+    max-width: 70%;
   }
 
   .snapshot__author {
@@ -75,7 +83,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 15px 21px 17px;
+    padding: 15px 16px 17px 21px;
     color: white;
     background-color: rgba(black, 0.3%);
   }

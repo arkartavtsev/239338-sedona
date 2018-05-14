@@ -109,8 +109,8 @@
   .main-nav__item {
     // на случай переполнения
     &:nth-child(n+5) {
-      margin-top: 40px;
       width: 400px;
+      margin-top: 40px;
     }
   }
 }
