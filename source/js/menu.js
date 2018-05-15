@@ -8,7 +8,7 @@ if (menuContainer) {
   menuToggle.classList.add("menu-toggle--open");
   menuToggle.classList.add("page-header__menu-toggle--open");
 
-  menuToggle.addEventListener('click', function(event) {
+  menuToggle.addEventListener("click", function(event) {
     event.preventDefault();
     menu.classList.toggle("page-header__main-nav--close");
     if (menuToggle.classList.contains("menu-toggle--open")) {
@@ -22,6 +22,5 @@ if (menuContainer) {
       menuToggle.classList.add("menu-toggle--open");
       menuToggle.classList.add("page-header__menu-toggle--open");
     }
-
   });
 }

@@ -16,11 +16,11 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var cssMinify = require("gulp-csso");
 
-var concat = require('gulp-concat');
-var jsMinify = require('gulp-uglify');
+var concat = require("gulp-concat");
+var jsMinify = require("gulp-uglify");
 
-var imgMinify = require('gulp-imagemin');
-var webpCreate = require('gulp-webp');
+var imgMinify = require("gulp-imagemin");
+var webpCreate = require("gulp-webp");
 
 
 gulp.task("copy", function() {
