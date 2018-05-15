@@ -3,27 +3,15 @@
   padding: 0;
   margin: 0;
   font: 14px/24px "PT Sans", "Arial", sans-serif;
+  // iOS fix
+  text-size-adjust: 100%;
   text-transform: uppercase;
   background-color: $light-gray;
 }
 
 .page-body__container {
-  width: 320px;
+  max-width: $desktop-width;
   margin: 0 auto;
   background-color: white;
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
-}
-
-
-@media (min-width: $tablet-width) {
-  .page-body__container {
-    width: $tablet-width;
-  }
-}
-
-
-@media (min-width: $desktop-width) {
-  .page-body__container {
-    width: $desktop-width;
-  }
 }

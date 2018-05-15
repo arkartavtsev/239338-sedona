@@ -19,7 +19,7 @@
 
 .main-nav__link {
   display: block;
-  padding: 7px 20px;
+  padding: 7px 6.25%;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
@@ -27,7 +27,6 @@
   text-decoration: none;
   color: white;
   background-color: $light-blue;
-
 
   &:hover {
     background-color: $light-blue-hover;
@@ -54,15 +53,23 @@
   .main-nav {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .main-nav__item {
-    width: 122.5px;
+    box-sizing: border-box;
+    width: 20%;
     padding: 15px;
     border: none;
 
     &:nth-child(2) {
       margin-right: auto;
+    }
+
+    // на случай переполнения
+    &:nth-child(n+5) {
+      margin-top: 30px;
+      width: 25%;
     }
   }
 
@@ -100,6 +107,10 @@
 
 @media (min-width: $desktop-width) {
   .main-nav__item {
-    width: 209px;
+    // на случай переполнения
+    &:nth-child(n+5) {
+      width: 400px;
+      margin-top: 40px;
+    }
   }
 }

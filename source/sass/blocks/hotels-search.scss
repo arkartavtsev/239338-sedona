@@ -4,7 +4,8 @@
 }
 
 .hotels-search__title {
-  width: 280px;
+  width: 87.5%;
+  max-width: 458px;
   margin: 0 auto;
   margin-bottom: 19px;
   font-weight: bold;
@@ -14,13 +15,15 @@
 }
 
 .hotels-search__text {
-  width: 280px;
+  width: 87.5%;
+  max-width: 458px;
   margin: 0 auto;
   margin-bottom: 35px;
 }
 
 .hotels-search__btn {
-  width: calc(100% - 40px);
+  width: 87.5%;
+  max-width: 458px;
   margin: 0 auto;
 }
 
@@ -31,18 +34,12 @@
   }
 
   .hotels-search__title {
-    width: 458px;
     margin-bottom: 30px;
     font-size: 30px;
   }
 
   .hotels-search__text {
-    width: 458px;
     margin-bottom: 42px;
-  }
-
-  .hotels-search__btn {
-    width: 458px;
   }
 }
 

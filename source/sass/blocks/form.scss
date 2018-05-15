@@ -1,10 +1,10 @@
 .form {
-  line-height: 26px;
   margin-bottom: 37px;
+  line-height: 26px;
 }
 
 .form__fields-group {
-  padding: 18px 20px 26px;
+  padding: 18px 6.25% 26px;
 
   &:last-of-type {
     padding-bottom: 0;
@@ -55,10 +55,9 @@
   cursor: pointer;
 
   &--selectable {
-    position: relative;
-    box-sizing: border-box;
-    padding: 15px 0;
-    padding-left: 78px;
+    display: flex;
+    align-items: center;
+    max-width: 280px;
     margin-right: 0;
     font-weight: bold;
     font-size: 18px;
@@ -67,45 +66,14 @@
     &:last-of-type {
       margin-bottom: 0;
     }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 56px;
-      height: 56px;
-      margin-right: 22px;
-      background-color: $light-gray;
-    }
-
-    &:hover::before {
-      background-color: $gray;
-    }
-
-    &:active::before {
-      background-color: $dark-gray;
-    }
-
-    &:active::after {
-      opacity: 0.3;
-    }
   }
 
   &--for-radiobtn {
     margin-bottom: 13px;
-
-    &::before {
-      border-radius: 50%;
-    }
   }
 
   &--for-checkbox {
     margin-bottom: 24px;
-
-    &::before {
-      border-radius: 5px;
-    }
   }
 
   &--contacts {
@@ -115,43 +83,76 @@
   }
 }
 
-.form__checkbox:checked + .form__label--selectable::after,
-.form__radiobtn:checked + .form__label--selectable::after {
+.form__selector-replacer {
+  position: relative;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  margin-right: 22px;
+  background-color: $light-gray;
+  cursor: pointer;
+  // IE fix
+  pointer-events: none;
+
+  &--radiobtn {
+    border-radius: 50%;
+  }
+
+  &--checkbox {
+    border-radius: 5px;
+  }
+}
+
+.form__label--selectable:hover .form__selector-replacer {
+  background-color: $gray;
+}
+
+.form__label--selectable:active .form__selector-replacer {
+  background-color: $dark-gray;
+}
+
+.form__label--selectable:active .form__selector-replacer::after {
+  opacity: 0.3;
+}
+
+.form__radiobtn:focus + .form__selector-replacer,
+.form__checkbox:focus + .form__selector-replacer {
+  outline: 2px solid $dark-gray;
+}
+
+.form__radiobtn:checked + .form__selector-replacer--radiobtn::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 17px;
-  transform: translateY(-50%);
-}
-
-.form__radiobtn:checked + .form__label--for-radiobtn::after {
+  left: 50%;
   width: 22px;
   height: 22px;
   background-color: $light-black;
   border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.form__checkbox:checked + .form__label--for-checkbox::after {
+.form__checkbox:checked + .form__selector-replacer--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 24px;
   height: 16px;
   background: url("../img/icon-tick.svg") 0 0 no-repeat;
-}
-
-.form__checkbox:focus + .form__label--selectable::before,
-.form__radiobtn:focus + .form__label--selectable::before {
-  background-color: $gray;
+  transform: translate(-50%, -50%);
 }
 
 .form__field {
   flex-grow: 1;
   box-sizing: border-box;
-  width: 150px;
+  width: 170px;
   height: 58px;
   padding: 0 20px;
   font-weight: bold;
-  font-family: inherit;
   font-size: 18px;
   line-height: inherit;
+  font-family: inherit;
   color: black;
   background-color: $light-gray;
   border: 4px solid $light-gray;
@@ -164,7 +165,7 @@
     width: 100%;
     height: 160px;
     resize: none;
-    padding: 10px 20px;
+    padding: 12px 16px;
   }
 
   &--contacts {
@@ -190,7 +191,7 @@
 }
 
 .form__btn {
-  width: calc(100% - 40px);
+  width: 87.5%;
   margin: 0 auto;
 }
 
@@ -205,7 +206,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 60px;
+    padding: 0 7.8125%;
     margin-bottom: 61px;
   }
 
@@ -215,7 +216,7 @@
     margin-bottom: 70px;
 
     &:last-of-type {
-      margin-bottom: 56px;
+      margin-bottom: 57px;
     }
 
     &--first {
@@ -224,7 +225,7 @@
 
     &--left-column {
       position: relative;
-      width: 323px;
+      width: 49.85%;
 
       &::after {
         content: "";
@@ -238,30 +239,37 @@
     }
 
     &--right-column {
-      width: 265px;
+      width: 40.9%;
     }
 
     &--contacts {
-      margin-bottom: 53px;
+      margin-bottom: 52px;
     }
   }
 
   .form__selectors-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 0 95px;
+    align-items: center;
+    width: 458px;
+    margin: 0 auto;
     margin-bottom: -32px;
   }
 
-  .form__fileds-wrapper--contacts {
-    margin-bottom: 23px;
+  .form__fileds-wrapper {
+    &--contacts {
+      margin-bottom: 23px;
+    }
   }
 
   .form__label {
     &--for-checkbox {
       width: 200px;
       margin-bottom: 32px;
+
+      &:last-of-type {
+        margin-bottom: 32px;
+      }
 
       // IE fix
       &:nth-of-type(odd) {
@@ -280,12 +288,14 @@
 
   .form__btn {
     width: 50%;
+    max-width: 480px;
     margin: 0;
   }
 
   .form__tip {
-    align-self: center;
     display: block;
+    align-self: center;
+    max-width: 42%;
   }
 }
 
@@ -309,28 +319,46 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: flex-end;
     }
   }
 
   .form__selectors-container {
-    padding: 0;
-    margin-bottom: 0;
+    width: auto;
+    margin: 0;
   }
 
   .form__fileds-wrapper {
     &--contacts {
+      max-width: 478px;
       margin-bottom: 0;
+
+      // на случай переполнения
+      &:nth-of-type(n+3) {
+        margin-top: 23px;
+      }
     }
   }
 
   .form__label {
     &--for-checkbox {
       width: auto;
-      padding-left: 82px;
+      max-width: 204px;
       margin-right: 67px;
       margin-bottom: 0;
 
       &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      // на случай переполнения
+      &:nth-of-type(n+5) {
+        width: 204px;
+        margin-top: 23px;
+        margin-right: 48px;
+      }
+
+      &:nth-of-type(4n) {
         margin-right: 0;
       }
     }
@@ -346,13 +374,18 @@
     }
   }
 
+  .form__selector-replacer {
+    &--checkbox {
+      margin-right: 26px;
+    }
+  }
+
   .form__hidden-unit {
     display: none;
   }
 
   .form__field {
     &--contacts {
-      flex-grow: 0;
       width: 316px;
     }
   }

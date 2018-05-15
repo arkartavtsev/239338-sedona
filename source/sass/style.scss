@@ -35,6 +35,11 @@
 @import "blocks/popup";
 
 
+img {
+  max-width: 100%;
+}
+
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;

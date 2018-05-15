@@ -13,6 +13,8 @@
 }
 
 .vote__thumb-icon {
+  // IE fix
+  position: relative;
   display: block;
   width: 22px;
   height: 20px;
@@ -23,22 +25,16 @@
   padding-top: 1px;
   font-weight: bold;
   color: black;
+  overflow: hidden;
 }
 
 
 @media (min-width: $tablet-width) {
   .vote {
-    width: 84px;
+    width: 70px;
   }
 
   .vote__btn {
     margin-right: 10px;
-  }
-}
-
-
-@media (min-width: $desktop-width) {
-  .vote {
-    width: 64px;
   }
 }

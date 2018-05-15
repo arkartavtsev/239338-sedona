@@ -1,3 +1,22 @@
 .menu-toggle {
+  width: 23px;
+  height: 22px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle__icon {
+  // IE fix
+  position: relative;
   display: none;
+
+  &--open {
+    fill: $light-blue;
+  }
+
+  &--close {
+    fill: white;
+  }
 }
